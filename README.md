@@ -3,11 +3,11 @@ it is a lightweight desktop application that plays every track through Apple Mus
 
 ```
 am-spotify-music-bridge/
-├─ .env.example          # ← 將值複製到 .env
+├─ .env.example         
 ├─ package.json
-├─ vite.config.mjs       # Vite 打包 React
-├─ electron.config.js    # electron-vite 設定
-├─ main/                 # Electron 主行程 & Service
+├─ vite.config.mjs     
+├─ electron.config.js    
+├─ main/                
 │  ├─ index.js
 │  ├─ preload.js
 │  └─ services/
@@ -15,7 +15,7 @@ am-spotify-music-bridge/
 │     ├─ apple.js
 │     ├─ cache.js
 │     └─ mapper.js
-└─ renderer/             # React Frontend
+└─ renderer/            
    ├─ index.html
    ├─ main.jsx
    └─ components/
