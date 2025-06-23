@@ -4,7 +4,7 @@ it is a lightweight desktop application that plays every track through Apple Mus
 ## Functional Workflow – “Apple Music × Spotify Recommendations”
 
 ```mermaid
-flowchart TD
+graph TD
     A["User selects first Apple Music track"] -->|Apple&nbsp;ID| B["MusicKit JS player"]
     B -->|When playback time &lt; 30 s| C["Read current track metadata\n(ISRC / title / artist)"]
     C --> D["Spotify Search -> current track ID"]
