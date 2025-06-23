@@ -1,6 +1,31 @@
 # Apple Music/Spotify music bridge for macOS
 it is a lightweight desktop application that plays every track through Apple Music’s high-fidelity player while outsourcing “Up Next” song selection to Spotify’s class-leading recommendation engine. The result is an uninterrupted listening session where you enjoy Apple Music’s sound quality and Spotify’s discovery magic.
 
+```
+am_spotify-music-bridge/
+├─ electron/
+│  ├─ main.ts        
+│  ├─ preload.ts    
+│  └─ spotify-oauth.ts  
+├─ src/
+│  ├─ App.tsx
+│  ├─ main.tsx
+│  ├─ components/
+│  │   ├─ Queue.tsx
+│  │   ├─ PlayerControls.tsx
+│  │   └─ LoginDialog.tsx
+│  └─ services/
+│      ├─ appleService.ts
+│      ├─ spotifyService.ts
+│      └─ lru.ts
+├─ test/             
+├─ vite.config.ts
+├─ tailwind.config.ts
+├─ package.json
+├─ .env.example
+└─ README.md
+```
+
 ## Functional Workflow – “Apple Music × Spotify Recommendations”
 
 ```mermaid
