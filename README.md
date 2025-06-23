@@ -2,28 +2,28 @@
 it is a lightweight desktop application that plays every track through Apple Music’s high-fidelity player while outsourcing “Up Next” song selection to Spotify’s class-leading recommendation engine. The result is an uninterrupted listening session where you enjoy Apple Music’s sound quality and Spotify’s discovery magic.
 
 ```
-am_spotify-music-bridge/
-├─ electron/
-│  ├─ main.ts        
-│  ├─ preload.ts    
-│  └─ spotify-oauth.ts  
-├─ src/
-│  ├─ App.tsx
-│  ├─ main.tsx
-│  ├─ components/
-│  │   ├─ Queue.tsx
-│  │   ├─ PlayerControls.tsx
-│  │   └─ LoginDialog.tsx
-│  └─ services/
-│      ├─ appleService.ts
-│      ├─ spotifyService.ts
-│      └─ lru.ts
-├─ test/             
-├─ vite.config.ts
-├─ tailwind.config.ts
+am-spotify-music-bridge/
+├─ .env.example          # ← 將值複製到 .env
 ├─ package.json
-├─ .env.example
-└─ README.md
+├─ vite.config.mjs       # Vite 打包 React
+├─ electron.config.js    # electron-vite 設定
+├─ main/                 # Electron 主行程 & Service
+│  ├─ index.js
+│  ├─ preload.js
+│  └─ services/
+│     ├─ spotify.js
+│     ├─ apple.js
+│     ├─ cache.js
+│     └─ mapper.js
+└─ renderer/             # React Frontend
+   ├─ index.html
+   ├─ main.jsx
+   └─ components/
+      ├─ SearchBar.jsx
+      ├─ Queue.jsx
+      ├─ NowPlaying.jsx
+      └─ Controls.jsx
+
 ```
 
 ## Functional Workflow – “Apple Music × Spotify Recommendations”
